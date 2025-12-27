@@ -12,6 +12,9 @@ It allows you to generate realistic mock data using JSON schemas, supporting:
 
 Powered by Faker.js.
 
+## 🔗 Live Demo :
+https://mock-data-forge.netlify.app
+
 ## ✨ Features
 
 - Single Core Engine
