@@ -1,8 +1,8 @@
-### 🚀Mock Data Forge
+# 🚀Mock Data Forge
 
 Mock Data Forge is a schema-driven mock data generator that works as both:
-- # 🌐 Web Application (browser-based)
-- # 🖥 Command Line Interface (CLI) (Node.js)
+- ### 🌐 Web Application (browser-based)
+- ### 🖥 Command Line Interface (CLI) (Node.js)
 
 It allows you to generate realistic mock data using JSON schemas, supporting:
 - primitive types
