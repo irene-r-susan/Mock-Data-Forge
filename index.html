@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mock Data Forge</title>
+  <style>
+    body {
+      font-family: "Press Start 2P", system-ui;
+      font-weight: 400;
+      font-style: normal;
+      padding: 20px;
+      background: black;
+      color: rgb(233, 173, 62);
+      border:2px #f5f5f5;
+      
+    }
+    h1{
+      display: flex;
+      justify-content: center;
+      
+    }
+    .row {
+      margin-bottom: 10px;
+    }
+    input, select, button {
+      padding: 6px;
+      margin-right: 5px;
+    }
+    pre {
+      background: #222;
+      color: rgb(11, 188, 70);
+      padding: 15px;
+      max-height: 300px;
+      overflow: auto;
+       border:2px solid #675e5e;
+     
+    }
+
+  
+
+
+
+    #schemaOutput{
+      background: #222;
+      color: rgb(11, 188, 70);
+      padding: 15px;
+      max-height: 300px;
+      overflow: auto;
+       border:2px solid #978c8c;
+    }
+   
+  </style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <h1>Mock Data Forge</h1>
+
+  <div class="row">
+    <input id="fieldName" placeholder="Field Name" />
+    <select id="fieldType">
+      <option value="name">name</option>
+      <option value="email">email</option>
+      <option value="uuid">uuid</option>
+      <option value="boolean">boolean</option>
+      <option value="number">number</option>
+      <option value="phone">phone</option>
+      <option value="date">date</option>
+      <option value="image_url">image_url</option>
+      <option value="file_url"> file_url</option>
+      <option value="integer">integer</option>
+      <option value="float">float</option>
+
+     
+    </select>
+    <button onclick="addField()">Add Field</button>
+  </div>
+ 
+   <h3>Schema</h3>
+   
+<textarea
+  id="schemaOutput"
+  rows="10"
+  cols="50"
+  placeholder='Edit your schema here
+Example:
+{
+  "name": "name",
+  "age": { "type": "integer", "min": 18, "max": 30 }
+}'
+></textarea>
+
+
+
+   <button onclick="copySchema()">Copy Schema</button>
+
+<button onclick="generateData()">Generate</button>  
+  <h3>Generated Data</h3>
+  <pre id="resultOutput">{}</pre>
+
+    <button onclick="copyOutput()">Copy Output</button>
+  <button onclick="clearSchema()"> Clear </button>
+
+<script type="module">
+  import { faker } from 'https://esm.sh/@faker-js/faker';
+  window.faker = faker;
+</script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
